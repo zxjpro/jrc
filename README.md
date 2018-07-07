@@ -20,7 +20,8 @@ j remove config 一个远程配置的开源项目
 
 文档地址
 
-DOCUMENT
+[DOCUMENT](https://github.com/zxjpro/jrc/tree/master/doc)
+
 
 **QQ交流群**：723624368
 
