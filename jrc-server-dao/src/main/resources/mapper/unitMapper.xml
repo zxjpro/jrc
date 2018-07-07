@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaojiezhu.jrc.server.dao.mysql.UnitDao">
+
+    <select id="listUnit" resultType="com.xiaojiezhu.jrc.model.Unit">
+        SELECT * from unit where 1=1
+         <if test="unitName != null and unitName != ''">
+             and unit like '${unitName}%'
+         </if>
+        <if test="group != null and group != ''">
+            and group_ like '${group}%'
+        </if>
+          order by update_time desc limit ${start},${size}
+    </select>
+
+    <select id="countUnit" resultType="long">
+        SELECT count(1) from unit where 1=1
+        <if test="unitName != null and unitName != ''">
+            and unit like '${unitName}%'
+        </if>
+        <if test="group != null and group != ''">
+            and group_ like '${group}%'
+        </if>
+    </select>
+</mapper>

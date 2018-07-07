@@ -1,0 +1,3 @@
+org.springframework.context.ApplicationListener=\
+com.xiaojiezhu.jrc.client.spring.JrcSpringConfiguration
+
